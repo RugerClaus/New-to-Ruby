@@ -1,11 +1,4 @@
 
-def endgame
-    puts 'Wrong! *in donald trumps voice*'
-    puts 'GAME OVER!'
-    puts 'Final Score: ' + String(rush_trivia(x-1))
-    rush_trivia()
-end
-
 def rush_trivia
 
     def endgame
@@ -95,12 +88,6 @@ def rush_trivia
                 endgame()
             end
             
-        end
-        def endgame
-            puts 'Wrong! *in donald trumps voice*'
-            puts 'GAME OVER!'
-            puts 'Final Score: ' + String(x-1)
-            rush_trivia()
         end
     end
 end
