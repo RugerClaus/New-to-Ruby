@@ -1,105 +1,92 @@
 
+def endgame
+    puts 'Wrong! *in donald trumps voice*'
+    puts 'GAME OVER!'
+    rush_trivia()
+end
+
 def rush_trivia
 
-    answers = [
+    q_and_a = [
         "John Rutsey",
         "1978",
         "1969",
         "Zivojinovic",
-        "Roll The Bones"
-    ]
-    questions = [
+        "Roll The Bones",
         "What is the name of Rush's original drummer?",
         "What year did the album 'Hemispheres' release?",
         "What year did the band form?",
         "What is Alex Lifeson's real last name?",
-        "What is the name of the band's 1991 Album, featuring a rap by Geddy Lee?",
+        "What is the name of the band's 1991 Album, featuring a rap by Geddy Lee?",  
     ]
+
 
     puts 'Welcome to Rush Trivia'
     puts 'Press enter/return to begin'
     input = gets
-    if input == ''
-        puts "Let's begin!"
-    end
-
-    puts ''
-    puts ''
-    puts questions[0]
-    input = gets.chomp()
-    if input == answers[0]
-        puts 'Correct!'
-        puts ''
-        puts ''
-        puts 'Score: 1'
-        puts 'Please Press enter'
-        input = gets
-        puts questions[1]
-        input = gets.chomp()
-        if input == answers[1]
-            puts 'Correct!'
-            puts ''
-            puts 'Score: 2'
-            puts 'Please Press enter'
-            input = gets
-            puts questions[2]
-            input = gets.chomp() 
-            if input == answers[2]
-                puts 'Correct!'
-                puts ''
-                puts 'Score: 3'
-                puts 'Please Press enter'
-                input = gets
-                puts questions[3]
-                input = gets.chomp()
-                if input == answers[3]
-                    puts 'Correct!'
-                    puts ''
-                    puts 'Score: 4'
-                    puts 'Please Press enter'
-                    input = gets
-                    puts questions[4]
-                    input = gets.chomp()
-                    if input == answers[4]
-                        puts 'Correct!'
-                        puts ''
-                        puts 'Score: 5'
-                        puts 'Please Press enter'
-                        input = gets
-                        puts 'Final Score: 5'
-                        puts 'GAME OVER!'
-
-                    else
-                        puts 'Wrong'
-                        puts 'Please press enter to restart'
-                        input = gets
-                        rush_trivia()
-                    end
-                else
-                    puts 'Wrong'
-                    puts 'Please press enter to restart'
-                    input = gets
-                    rush_trivia()
-                end
+    x = 0
+ 
+    # using for loop with the range
+    for questions in 1..5 do
+        
+        x+=1
+        if x == 1
+            puts 'Score: ' + String(x-1)
+            puts q_and_a[5]
+            input = gets.chomp()
+            if input == q_and_a[0]
+                puts 'Correct'
             else
-                puts 'Wrong'
-                puts 'Please press enter to restart'
-                input = gets
-                rush_trivia()
+                endgame()
             end
-
-        else
-            puts 'Wrong'
-            puts 'Please press enter to restart'
-            input = gets
-            rush_trivia()  
+            
         end
-    else
-        puts 'Wrong'
-        puts 'Please press enter to restart'
-        input = gets
-        rush_trivia()
+        if x == 2
+            puts 'Score: ' + String(x-1)
+            puts q_and_a[6]
+            input = gets.chomp()
+            if input == q_and_a[1]
+                puts 'Correct'
+            else
+                endgame()
+            end
+            
+        end
+        if x == 3
+            puts 'Score: ' + String(x-1)
+            puts q_and_a[7]
+            input = gets.chomp()
+            if input == q_and_a[2]
+                puts 'Correct'
+            else
+                endgame()
+            end
+            
+        end
+        if x == 4
+            puts 'Score: ' + String(x-1)
+            puts q_and_a[8]
+            input = gets.chomp()
+            if input == q_and_a[3]
+                puts 'Correct'
+            else
+                endgame()
+            end
+            
+        end
+        if x == 5
+            puts 'Score: ' + String(x-1)
+            puts q_and_a[9]
+            input = gets.chomp()
+            if input == q_and_a[4]
+                puts 'Correct'
+                puts 'You Win!'
+                puts '#####Final Score: ' + String(x-1) + '#####'
+            else
+                endgame()
+            end
+            
+        end
     end
-
 end
 rush_trivia()
