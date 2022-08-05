@@ -34,6 +34,7 @@ def rush_trivia
                 puts 'Correct'
                 puts "\e[H\e[2J"
             else
+                puts '#####  Final Score: ' + String(x-1) + '  #####'
                 endgame
             end
             
@@ -46,6 +47,7 @@ def rush_trivia
                 puts 'Correct'
                 puts "\e[H\e[2J"
             else
+                puts '#####  Final Score: ' + String(x-1) + '  #####'
                 endgame
             end
             
@@ -58,6 +60,7 @@ def rush_trivia
                 puts 'Correct'
                 puts "\e[H\e[2J"
             else
+                puts '#####  Final Score: ' + String(x-1) + '  #####'
                 endgame
             end
             
@@ -70,6 +73,7 @@ def rush_trivia
                 puts 'Correct'
                 puts "\e[H\e[2J"
             else
+                puts '#####  Final Score: ' + String(x-1) + '  #####'
                 endgame
             end
             
@@ -84,6 +88,7 @@ def rush_trivia
                 puts 'You Win!'
                 puts '#####  Final Score: ' + String(x) + '  #####'
             else
+                puts '#####  Final Score: ' + String(x-1) + '  #####'
                 endgame
             end
             
