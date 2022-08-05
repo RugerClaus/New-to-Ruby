@@ -2,10 +2,17 @@
 def endgame
     puts 'Wrong! *in donald trumps voice*'
     puts 'GAME OVER!'
+    puts 'Final Score: ' + String(rush_trivia(x-1))
     rush_trivia()
 end
 
 def rush_trivia
+
+    def endgame
+        puts 'Wrong! *in donald trumps voice*'
+        puts 'GAME OVER!'
+        rush_trivia()
+    end
 
     q_and_a = [
         "John Rutsey",
@@ -25,7 +32,9 @@ def rush_trivia
     puts 'Press enter/return to begin'
     input = gets
     x = 0
- 
+    
+    
+
     # using for loop with the range
     for questions in 1..5 do
         
@@ -81,11 +90,17 @@ def rush_trivia
             if input == q_and_a[4]
                 puts 'Correct'
                 puts 'You Win!'
-                puts '#####Final Score: ' + String(x-1) + '#####'
+                puts '#####  Final Score: ' + String(x-1) + '  #####'
             else
                 endgame()
             end
             
+        end
+        def endgame
+            puts 'Wrong! *in donald trumps voice*'
+            puts 'GAME OVER!'
+            puts 'Final Score: ' + String(x-1)
+            rush_trivia()
         end
     end
 end
