@@ -83,7 +83,7 @@ def rush_trivia
             if input == q_and_a[4]
                 puts 'Correct'
                 puts 'You Win!'
-                puts '#####  Final Score: ' + String(x-1) + '  #####'
+                puts '#####  Final Score: ' + String(x) + '  #####'
             else
                 endgame()
             end
@@ -91,4 +91,8 @@ def rush_trivia
         end
     end
 end
-rush_trivia()
+begin
+    rush_trivia
+rescue => exception
+    puts 'Error!'
+end
