@@ -7,19 +7,9 @@ def rush_trivia
         rush_trivia()
     end
 
-    q_and_a = [
-        "John Rutsey",
-        "1978",
-        "1969",
-        "Zivojinovic",
-        "Roll The Bones",
-        "What is the name of Rush's original drummer?",
-        "What year did the album 'Hemispheres' release?",
-        "What year did the band form?",
-        "What is Alex Lifeson's real last name?",
-        "What is the name of the band's 1991 Album, featuring a rap by Geddy Lee?",  
-    ]
-
+    q_and_a = ["John Rutsey","1978","1969","Zivojinovic","Roll The Bones","What is the name of Rush's original drummer?",
+        "What year did the album 'Hemispheres' release?","What year did the band form?",
+        "What is Alex Lifeson's real last name?","What is the name of the band's 1991 Album, featuring a rap by Geddy Lee?"]
 
     puts 'Welcome to Rush Trivia'
     puts 'Press enter/return to begin'
@@ -32,12 +22,17 @@ def rush_trivia
     for questions in 1..5 do
         
         x+=1
+        puts 'Loading'
+        sleep 2
+        puts "\e[H\e[2J"
         if x == 1
+            puts "\e[H\e[2J"
             puts 'Score: ' + String(x-1)
             puts q_and_a[5]
             input = gets.chomp()
             if input == q_and_a[0]
                 puts 'Correct'
+                puts "\e[H\e[2J"
             else
                 endgame()
             end
@@ -49,6 +44,7 @@ def rush_trivia
             input = gets.chomp()
             if input == q_and_a[1]
                 puts 'Correct'
+                puts "\e[H\e[2J"
             else
                 endgame()
             end
@@ -60,6 +56,7 @@ def rush_trivia
             input = gets.chomp()
             if input == q_and_a[2]
                 puts 'Correct'
+                puts "\e[H\e[2J"
             else
                 endgame()
             end
@@ -71,6 +68,7 @@ def rush_trivia
             input = gets.chomp()
             if input == q_and_a[3]
                 puts 'Correct'
+                puts "\e[H\e[2J"
             else
                 endgame()
             end
@@ -81,6 +79,7 @@ def rush_trivia
             puts q_and_a[9]
             input = gets.chomp()
             if input == q_and_a[4]
+                puts "\e[H\e[2J"
                 puts 'Correct'
                 puts 'You Win!'
                 puts '#####  Final Score: ' + String(x) + '  #####'
