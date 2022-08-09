@@ -1,3 +1,5 @@
+
+
 def endgame
     puts "Wrong! *in Donald Trump's voice*"
     puts 'GAME OVER!'
@@ -13,7 +15,7 @@ end
     $answers_three = ['1960', '1873','1999', '1969']
     $answers_four = ['Jackson', 'Zivojinovic', 'Ryan', 'Kolishnakov']
     $answers_five = ['Hemispheres', 'Roll The Bones', 'Let It Be', 'Moving Pictures']
-    $numbers_of_questions = ["(1): ", "(2): ", "(3): ", "(4): "]
+    $numbers_of_questions = ["(A): ", "(B): ", "(C): ", "(D): "]
 
 
 def rush_trivia
@@ -63,31 +65,33 @@ def rush_trivia
             puts "Score: #{i-1}"
             question1
             input = gets.chomp()
-            if input == 4 or '4' or 'John Rutsey'
-                puts 'Correct!'
-                puts "\e[H\e[2J"
-            else
+            if input != 'd'
                 puts "#####  Final Score: #{i-1}  #####"
                 sleep 1
                 endgame
+            else
+                puts 'Correct!'
+                puts "\e[H\e[2J"
+                
             end
         when 2 then
             puts "Score: #{i-1}"
             question2
-            input = gets
-            if input == 3 or '3' or '1978' 
-                puts 'Correct!'
-                puts "\e[H\e[2J"
-            else
+            input = gets.chomp()
+            if input != 'c'
                 puts "#####  Final Score: #{i-1}  #####"
                 sleep 1
                 endgame
+            else
+                puts 'Correct!'
+                puts "\e[H\e[2J"
+                
             end
         when 3 then
             puts "Score: #{i-1}"
             question3
-            input = gets
-            if input == 4 or '4' or '1969'
+            input = gets.chomp()
+            if input == 'd'
                 puts 'Correct!'
                 puts "\e[H\e[2J"
             else
@@ -98,8 +102,8 @@ def rush_trivia
         when 4 then
             puts "Score: #{i-1}"
             question4
-            input = gets
-            if input == 2 or '2' or 'Zivojinovic' or 'zivojinovic'
+            input = gets.chomp()
+            if input == 'b'
                 puts 'Correct!'
                 puts "\e[H\e[2J"
             else
@@ -110,8 +114,8 @@ def rush_trivia
         when 5 then
             puts "Score: #{i-1}"
             question5
-            input = gets
-            if input == 2 or '2' or 'roll the bones' or 'Roll The Bones'
+            input = gets.chomp()
+            if input == 'b'
                 puts 'Correct!'
                 puts "\e[H\e[2J"
                 sleep 0.5
@@ -138,3 +142,4 @@ begin
 rescue => exception
     rush_trivia
 end
+Footer
