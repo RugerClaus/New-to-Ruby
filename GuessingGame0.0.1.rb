@@ -59,7 +59,7 @@ def guessing_game
     intro
 
     puts "You need to guess a word that is sexual, yet innocent. Charming, yet repulsive."
-    puts "It rhymes with nipple, and has similar consanants to Fuck."
+    puts "It rhymes with knuckle, or even chuckle."
 
     while $guess != $secret_word and !$out_of_guesses
         if $guess_count < $guess_limit
