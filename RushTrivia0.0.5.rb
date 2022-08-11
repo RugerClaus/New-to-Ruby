@@ -44,7 +44,31 @@ def endgame
     play_again
 end
 
+def loading
+    puts "\e[H\e[2J"
+    puts "loading..."
+    sleep 1
+    puts "\e[H\e[2J"
+    puts $current_score
+end
 
+def win
+    puts "\e[H\e[2J"
+                sleep 1
+                puts "loading..."
+                sleep 1
+                puts "\e[H\e[2J"
+                puts "You Win!"
+                sleep 1
+                puts $final_score
+                sleep 5
+                puts "\e[H\e[2J"
+end
+def correct
+    puts "Correct!"
+    sleep 1
+    puts "\e[H\e[2J"
+end
 def rush_trivia
 
 
@@ -85,105 +109,65 @@ def rush_trivia
                 end
                 $answer = gets.chomp()
                 if $answer == "D" || $answer == "d"
-                    puts "Correct!"
-                    sleep 1
-                    puts "\e[H\e[2J"
+                    correct
                 else
                     puts $final_score
                     endgame
                 end
             when 1 then
-                puts $current_score
-                puts "\e[H\e[2J"
-                puts "loading..."
-                sleep 1
-                puts "\e[H\e[2J"
-                puts $current_score
+                loading
                 puts ($questions[:question2])
                 for answers in $answers_two do
                     puts answers
                 end
                 $answer = gets.chomp()
                 if $answer == "C" || $answer == "c"
-                    puts "Correct!"
-                    sleep 1
-                    puts "\e[H\e[2J"
+                    correct
                 else
                     puts $final_score
                     endgame
                 end
             when 2 then
-                puts $current_score
-                puts "\e[H\e[2J"
-                puts "loading..."
-                sleep 1
-                puts "\e[H\e[2J"
-                puts $current_score
+                loading
                 puts ($questions[:question3])
                 for answers in $answers_three do
                     puts answers
                 end
                 $answer = gets.chomp()
                 if $answer == "D" || $answer == "d"
-                    puts "Correct!"
-                    sleep 1
-                    puts "\e[H\e[2J"
+                    correct
                 else
                     puts $final_score
                     endgame
                 end
             when 3 then
-                puts $current_score
-                puts "\e[H\e[2J"
-                puts "loading..."
-                sleep 1
-                puts "\e[H\e[2J"
-                puts $current_score
+                loading
                 puts ($questions[:question4])
                 for answers in $answers_four do
                     puts answers
                 end
                 $answer = gets.chomp()
                 if $answer == "B" || $answer == "b"
-                    puts "Correct!"
-                    sleep 1
-                    puts "\e[H\e[2J"
+                    correct
                 else
                     puts $final_score
                     endgame
                 end
             when 4 then
-                puts $current_score
-                puts "\e[H\e[2J"
-                puts "loading..."
-                sleep 1
-                puts "\e[H\e[2J"
-                puts $current_score
+                loading
                 puts ($questions[:question5])
                 for answers in $answers_five do
                     puts answers
                 end
                 $answer = gets.chomp()
                 if $answer == "B" || $answer == "b"
-                    puts "Correct!"
-                    sleep 1
-                    puts "\e[H\e[2J"
+                    correct
                 else
                     puts $final_score
                     endgame
                 end
             when 5 then
-                puts $current_score
-                puts "\e[H\e[2J"
-                sleep 1
-                puts "loading..."
-                sleep 1
-                puts "\e[H\e[2J"
-                puts "You Win!"
-                sleep 1
-                puts $final_score
-                sleep 5
-                puts "\e[H\e[2J"
+                win
                 play_again
             end
         end
