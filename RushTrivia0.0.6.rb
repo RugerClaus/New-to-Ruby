@@ -1,8 +1,8 @@
 class RushTriviaQuestions
-    attr_accessor :prompt, :answer
-    def initialize(prompt,answer)
-        @prompt = prompt
-        @answer = answer
+    attr_accessor :question, :answer
+    def initialize(question,answer)
+        @question = question
+        @question = question
     end
 end
 
@@ -20,7 +20,18 @@ questions = [
     RushTriviaQuestions.new($q5,"b"),
 ]
 
+
+
 def rush_trivia(questions)
+    def play_again
+        puts "Would you like to play again? y/n"
+        input = gets.chomp()
+        if input == "y" || input == "Y"
+            rush_trivia
+        else
+            return
+        end
+    end
     answer = ""
     score = 0
 
@@ -35,8 +46,10 @@ def rush_trivia(questions)
     puts ("You got #{score} out of #{questions.length} correct!")
     if score >= 3
         puts "You win"
+        play_again
     else
         puts "You lose"
+        play_again
     end
 end
 
