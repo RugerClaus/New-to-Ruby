@@ -37,7 +37,7 @@ def rush_trivia(questions)
 
 
     for question in questions do
-        puts question.prompt
+        puts question.question
         answer = gets.chomp()
         if answer == question.answer
             score += 1
