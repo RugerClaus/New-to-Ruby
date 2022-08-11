@@ -27,7 +27,7 @@ def rush_trivia(questions)
         puts "Would you like to play again? y/n"
         input = gets.chomp()
         if input == "y" || input == "Y"
-            rush_trivia
+            rush_trivia(questions)
         else
             return
         end
