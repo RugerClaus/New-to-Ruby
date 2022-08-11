@@ -1,9 +1,22 @@
+# get power of base number
+
+# def power(base,power)
+#     result = 1
+#     power.times do
+#         result = result * base
+#     end
+#     return result
+# end
+# puts power(6,3)
 
 
-puts 'please enter a number to multiply'
-input1 = gets.chomp()
-puts 'please enter a second number'
-input2 = gets.chomp()
-solution = input1 * input2
-puts "Solution: #{solution}"
-sleep(4)
+$employees = []
+
+
+# file = File.open("employees.txt", "r")
+# puts file.read
+# sleep 5
+# puts file.close
+
+folder = Dir.open("../Reina 5.0")
+puts folder
