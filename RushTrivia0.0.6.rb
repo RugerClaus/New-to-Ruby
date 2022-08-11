@@ -10,7 +10,7 @@ $q1 = "What is the name of Rush's original drummer?\n(A): John Bonham\n(B): Jame
 $q2 = "What year did the album 'Hemispheres' release?\n(A): 1994\n(B): 1873\n(C): 1978\n(D): 1492"
 $q3 = "What year did the band form?\n(A): 1960\n(B): 1873\n(C): 1999\n(D): 1969"
 $q4 = "What is Alex Lifeson's real last name?\n(A): Jackson\n(B): Zivojinovic\n(C): Ryan\n(D): Kolishnakov"
-$q5 = "What is the name of the band's 1991 Album, featuring a rap by Geddy Lee?\n(A): Hemispheres\nB): Roll The Bones\n(C): Let It Be\n(D): Moving Pictures"
+$q5 = "What is the name of the band's 1991 Album, featuring a rap by Geddy Lee?\n(A): Hemispheres\n(B): Roll The Bones\n(C): Let It Be\n(D): Moving Pictures"
 
 questions = [
     RushTriviaQuestions.new($q1,"d"),
