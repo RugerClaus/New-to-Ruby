@@ -92,40 +92,71 @@
 #  \  |  /
 #   \ | /
 #    \|/
-class Question
-    attr_accessor :prompt, :answer
-    def initialize(prompt,answer)
-        @prompt = prompt
-        @answer = answer
-    end
-end
+# class Question
+#     attr_accessor :prompt, :answer
+#     def initialize(prompt,answer)
+#         @prompt = prompt
+#         @answer = answer
+#     end
+# end
 
-p1 = "What color are apples?\n(a)red\n(b)purple\n(c)orange"
-p2 = "What color are bananas?\n(a)pink\n(b)red\n(c)yellow"
-p3 = "What color are pears?\n(a)yellow\n(b)green\n(c)orange"
+# p1 = "What color are apples?\n(a)red\n(b)purple\n(c)orange"
+# p2 = "What color are bananas?\n(a)pink\n(b)red\n(c)yellow"
+# p3 = "What color are pears?\n(a)yellow\n(b)green\n(c)orange"
 
-questions = [
-    Question.new(p1,"a"),
-    Question.new(p2,"c"),
-    Question.new(p3,"b")
-]
+# questions = [
+#     Question.new(p1,"a"),
+#     Question.new(p2,"c"),
+#     Question.new(p3,"b")
+# ]
 
-def run_test(questions)
-    answer = ""
-    score = 0
+# def run_test(questions)
+#     answer = ""
+#     score = 0
 
 
-    for question in questions do
-        puts question.prompt
-        answer = gets.chomp()
-        if answer == question.answer
-            score += 1
+#     for question in questions do
+#         puts question.prompt
+#         answer = gets.chomp()
+#         if answer == question.answer
+#             score += 1
 
-        else
-            score -= 1
-        end
-    end
-    puts ("You got #{score} out of #{questions.length} correct!")
-end
+#         else
+#             score -= 1
+#         end
+#     end
+#     puts ("You got #{score} out of #{questions.length} correct!")
+# end
 
-run_test(questions)
+# run_test(questions)
+
+# OOP 3
+#   Quiz
+#  \  |  /
+#   \ | /
+#    \|/
+
+# class Chef
+#     def make_chicken
+#         puts "The chef makes chicken"
+#     end
+#     def make_salad
+#         puts "The chef makes salad"
+#     end
+#     def make_special_dish
+#         puts "The chef makes bbq ribs"
+#     end
+# end
+# class ItalianChef < Chef
+#     def make_special_dish
+#         "The chef makes eggplant parm"
+#     end
+#     def make_pasta
+#         puts "The chef makes pasta"
+#     end
+# end
+# chef = Chef.new()
+# chef.make_chicken
+# italian_chef = ItalianChef.new()
+# chef.make_special_dish
+# italian_chef.make_special_dish
