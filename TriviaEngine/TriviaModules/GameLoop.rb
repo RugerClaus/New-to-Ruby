@@ -2,11 +2,11 @@ require_relative 'TriviaQuestions.rb'
 require_relative 'JSONParser.rb'
 
 include TriviaQuestions
-include JsonCreator
+include JsonParser
 
 puts "Please enter the name of a quiz file in the assets directory"
 input = gets.chomp()
-JsonCreator.quiz_selector(input)
+JsonParser.quiz_selector(input)
 
 questions = [
     TriviaQuestions.new(data_hash["$q1"],"d"),

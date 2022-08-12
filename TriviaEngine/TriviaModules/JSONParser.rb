@@ -1,4 +1,4 @@
-module JsonCreator
+module JsonParser
     def quiz_selector(input)
         
         quiz_data = File.read("../assets/#{input}.json")
