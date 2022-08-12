@@ -1,5 +1,13 @@
 require 'json'
 
+class TriviaQuestions
+    attr_accessor :question, :answer
+    def initialize(question,answer)
+        @question = question
+        @question = question
+    end
+end
+
 $questions = File.read("RushTrivia.json")
 data_hash = JSON.parse($questions)
 
