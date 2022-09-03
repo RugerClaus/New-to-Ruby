@@ -4,7 +4,7 @@ class TriviaQuestions
     attr_accessor :question, :answer
     def initialize(question,answer)
         @question = question
-        @question = question
+        @answer = answer
     end
 end
 
